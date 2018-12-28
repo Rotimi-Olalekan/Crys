@@ -1,0 +1,28 @@
+<ion-content class="onboarding">
+
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slides">
+      
+        <ion-buttons end>
+          <button ion-button clear small color="primary" (click)="skip()" id="skip">Skip</button>
+        </ion-buttons>
+      
+      <img [src]="slide.image" class="slide-image"/>
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p>
+    
+    </ion-slide>
+    <ion-slide>
+      <ion-toolbar>
+      </ion-toolbar>
+      <img src="assets/imgs/slide3.png" class="slide-image"/>
+      <h2 class="slide-title">Clear and Understandable Demonstrations</h2>
+      <p>Our video lessons explin how to do everything yourself, step-by-step. Download lessons for no extra charge</p>
+      <div padding>
+      <button ion-button block color="primary" style="margin: 1em;"(click)="skip()">
+        Start Learning
+      </button>
+    </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
